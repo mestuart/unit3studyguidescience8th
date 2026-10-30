@@ -1,0 +1,955 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>8th Grade Science Unit 3 Study Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: orange spirit band with logo slot, gray-and-white study panels. Orange = applied force arrows and actions, gray = opposing force, charcoal = net force. */
+:root {
+  --bg: #f3f4f5;
+  --surface: #ffffff;
+  --ink: #22262a;
+  --muted: #59626b;
+  --line: #d5d9dd;
+  --force: #d8560c;
+  --react: #59626b;
+  --good: #1b7a4b;
+  --bad: #b3342d;
+  --obj: #e4e7ea;
+  --grid: #e9ecef;
+  --accent: #c24e0a;
+  --on-accent: #ffffff;
+  --good-bg: #e2f3ea;
+  --bad-bg: #fbe8e6;
+  --orange: #f26b1d;
+  --orange-soft: #fdeadd;
+  --band-ink: #1f2328;
+  --gray-dark: #3a4046;
+  --display: "Barlow Condensed", "Arial Narrow", "Trebuchet MS", sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #181b1e; --surface: #23272b; --ink: #eceef0; --muted: #a3acb5; --line: #384047;
+    --force: #ff9a55; --react: #b4bcc5; --good: #53c88f; --bad: #ff8f86; --obj: #343b42; --grid: #2b3238;
+    --accent: #ff9a55; --on-accent: #1a1d20; --good-bg: #17342a; --bad-bg: #3b1f1f; --orange-soft: #3a2a1f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #181b1e; --surface: #23272b; --ink: #eceef0; --muted: #a3acb5; --line: #384047;
+  --force: #ff9a55; --react: #b4bcc5; --good: #53c88f; --bad: #ff8f86; --obj: #343b42; --grid: #2b3238;
+  --accent: #ff9a55; --on-accent: #1a1d20; --good-bg: #17342a; --bad-bg: #3b1f1f; --orange-soft: #3a2a1f; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.5;
+  padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+header { display: flex; flex-direction: column; gap: 4px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(28px, 6vw, 40px); line-height: 1.08; margin: 0; text-wrap: balance; }
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible, .card:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.tab { border: 2px solid var(--line); background: var(--surface); border-radius: 999px; padding: 8px 18px; font-weight: 700; }
+.tab[aria-current="page"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.panel { display: flex; flex-direction: column; gap: 14px; }
+.panel[hidden] { display: none; }
+.bar { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; justify-content: space-between; }
+.seg { display: inline-flex; border: 2px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--surface); }
+.seg button { border: 0; background: transparent; padding: 7px 14px; font-weight: 600; font-size: 15px; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+.btn { border: 2px solid var(--line); background: var(--surface); border-radius: 10px; padding: 9px 16px; font-weight: 700; }
+.btn:hover:not(:disabled) { border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn.good { background: var(--good); border-color: var(--good); color: #fff; }
+.btn.warn { background: var(--surface); border-color: var(--react); }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.meter { display: flex; flex-direction: column; gap: 6px; }
+.meter-top { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.track { height: 8px; border-radius: 8px; background: var(--line); overflow: hidden; display: flex; }
+.track i { display: block; height: 100%; }
+.track .got { background: var(--good); }
+.track .miss { background: var(--react); }
+
+/* flash card */
+.stage { perspective: 1200px; }
+.card { display: grid; width: 100%; text-align: left; border: 0; padding: 0; background: none; border-radius: 18px; transform-style: preserve-3d; transition: transform .55s cubic-bezier(.3,.7,.2,1); }
+.card.flipped { transform: rotateY(180deg); }
+.face { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; background: var(--surface); border: 2px solid var(--line); border-radius: 18px; padding: 20px; min-height: 380px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.face.back { transform: rotateY(180deg); }
+.chip { align-self: flex-start; font-family: var(--mono); font-size: 12px; font-weight: 700; border: 1.5px solid var(--line); border-radius: 6px; padding: 2px 8px; color: var(--muted); }
+.term { font-family: var(--display); font-weight: 700; font-size: clamp(32px, 8vw, 52px); line-height: 1.05; margin: 0; text-wrap: balance; }
+.front-center { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+.flip-hint { font-size: 14px; color: var(--muted); margin: 0; }
+.back h2 { font-family: var(--display); font-size: 24px; line-height: 1.1; margin: 0; }
+.def { margin: 0; font-size: 18px; }
+.fig { background-color: var(--surface); background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 14px 14px; border: 1.5px solid var(--line); border-radius: 12px; padding: 6px; display: flex; justify-content: center; }
+.fig svg { width: 100%; max-width: 380px; height: auto; display: block; }
+.fig.big svg { max-width: 440px; }
+.state-pill { align-self: flex-start; font-size: 13px; font-weight: 700; border-radius: 999px; padding: 2px 10px; }
+.state-pill.got { background: var(--good-bg); color: var(--good); }
+.state-pill.miss { background: var(--bad-bg); color: var(--bad); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; }
+.actions .grp { display: flex; gap: 10px; flex-wrap: wrap; }
+.note { color: var(--muted); font-size: 14px; margin: 0; }
+
+/* svg art */
+svg .obj { fill: var(--obj); stroke: var(--ink); stroke-width: 2; }
+svg .gnd { stroke: var(--ink); stroke-width: 2; }
+svg .teeth { stroke: var(--ink); stroke-width: 1.5; fill: none; }
+svg .lbl { fill: var(--ink); font: 700 10.5px var(--mono); }
+svg .cap { fill: var(--muted); font: 600 10.5px var(--body); }
+svg .big { fill: var(--ink); font: 700 30px var(--display); }
+svg .dash { fill: none; stroke: var(--muted); stroke-width: 2; stroke-dasharray: 5 4; }
+svg .arr { stroke-linecap: round; }
+svg .arr line { stroke: currentColor; }
+svg .arr polygon { fill: currentColor; }
+svg .arr.f { color: var(--force); }
+svg .arr.r { color: var(--react); }
+svg .arr.n { color: var(--ink); }
+
+/* quiz */
+.qcard { background: var(--surface); border: 2px solid var(--line); border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+.qtext { font-family: var(--display); font-weight: 600; font-size: clamp(20px, 4.5vw, 24px); line-height: 1.25; margin: 0; text-wrap: balance; }
+.opts { display: flex; flex-direction: column; gap: 10px; }
+.opt { text-align: left; border: 2px solid var(--line); background: var(--surface); border-radius: 12px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start; }
+.opt .k { font-family: var(--mono); font-weight: 700; font-size: 13px; border: 1.5px solid var(--line); border-radius: 6px; min-width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.opt:hover:not(:disabled) { border-color: var(--accent); }
+.opt:disabled { cursor: default; }
+.opt.right { border-color: var(--good); background: var(--good-bg); }
+.opt.wrong { border-color: var(--bad); background: var(--bad-bg); }
+.opt .t { min-width: 0; }
+.fb { border-radius: 12px; padding: 12px 14px; border: 2px solid var(--line); }
+.fb.right { border-color: var(--good); background: var(--good-bg); }
+.fb.wrong { border-color: var(--bad); background: var(--bad-bg); }
+.fb strong { display: block; }
+.score { font-family: var(--display); font-weight: 700; font-size: clamp(40px, 10vw, 64px); line-height: 1; margin: 0; font-variant-numeric: tabular-nums; }
+.review { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.review li { border: 2px solid var(--line); border-radius: 12px; padding: 12px 14px; background: var(--surface); }
+.review .q { font-weight: 700; margin: 0 0 4px; }
+.review .a { margin: 0; color: var(--good); font-weight: 600; }
+.review .w { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  .face { padding: 16px; min-height: 360px; }
+  .def { font-size: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
+}
+
+/* ---- Study Guide Zone shell ---- */
+body { margin: 0; padding: 0 0 48px; }
+.in { max-width: 780px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.band { display: block; background: var(--orange); color: var(--band-ink); border-bottom: 6px solid var(--gray-dark); padding-block: 18px 16px; }
+.band .in { display: flex; gap: 16px; align-items: center; }
+.logo { flex: none; width: 76px; height: 76px; border-radius: 50%; background: #fff; border: 3px solid var(--gray-dark); display: grid; place-items: center; overflow: hidden; }
+.logo img { width: 100%; height: 100%; object-fit: contain; }
+.logo svg { width: 46px; height: 46px; }
+.band .titles { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.nw { white-space: nowrap; }
+.cradle { flex: none; width: 150px; height: auto; }
+.cradle .bl { transform: rotate(-32deg); }
+@media (prefers-reduced-motion: no-preference) {
+  .cradle .bl { animation: swing-left 2.4s linear infinite; }
+  .cradle .br { animation: swing-right 2.4s linear infinite; }
+}
+@keyframes swing-left { 0% { transform: rotate(-32deg); animation-timing-function: cubic-bezier(.55, 0, 1, .45); } 25% { transform: rotate(0deg); } 75% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0, .55, .45, 1); } 100% { transform: rotate(-32deg); } }
+@keyframes swing-right { 0%, 25% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0, .55, .45, 1); } 50% { transform: rotate(32deg); animation-timing-function: cubic-bezier(.55, 0, 1, .45); } 75%, 100% { transform: rotate(0deg); } }
+@media (max-width: 640px) { .band .in { flex-wrap: wrap; } .band .titles { flex: 1 1 200px; } .cradle { flex: 0 0 100%; width: 100%; max-width: none; height: 84px; margin-top: 2px; } }
+.band .eyebrow { color: var(--band-ink); font-weight: 700; }
+.band h1 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 7.2vw, 54px); line-height: .95; letter-spacing: .01em; text-transform: uppercase; margin: 0; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,.4); text-wrap: balance; }
+.band .sub { margin: 4px 0 0; font-weight: 600; font-size: 15px; }
+main.in { display: flex; flex-direction: column; gap: 16px; padding-top: 16px; }
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+.tab[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.tab { font-size: 15px; padding: 8px 14px; }
+.tabs { align-items: center; }
+.nimg { height: 80px; width: auto; align-self: center; margin-left: 6px; color: var(--ink); }
+.h2 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 6vw, 34px); line-height: 1.05; margin: 0; text-transform: uppercase; letter-spacing: .01em; }
+.h3 { font-family: var(--display); font-weight: 700; font-size: 22px; line-height: 1.1; margin: 0; }
+.box { background: var(--surface); border: 2px solid var(--line); border-radius: 16px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.box.hot { border-color: var(--orange); background: var(--orange-soft); }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.box p, .box ul, .box ol { margin: 0; }
+.box ul, .box ol { padding-left: 22px; display: flex; flex-direction: column; gap: 4px; }
+.formula { font-family: var(--mono); font-weight: 700; font-size: clamp(18px, 4.6vw, 26px); background: var(--gray-dark); color: #fff; border-radius: 12px; padding: 12px 16px; overflow-x: auto; }
+.tbl { overflow-x: auto; }
+.tbl table { border-collapse: collapse; width: 100%; font-size: 15px; }
+.tbl caption { font-weight: 700; padding-bottom: 6px; text-align: center; }
+.tbl th, .tbl td { border: 1.5px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+.tbl th { background: var(--obj); }
+details.acc { border: 2px solid var(--line); border-radius: 12px; background: var(--surface); }
+details.acc summary { cursor: pointer; padding: 11px 14px; font-weight: 700; list-style-position: inside; }
+details.acc summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 10px; }
+details.acc .in2 { padding: 0 14px 14px; display: flex; flex-direction: column; gap: 6px; }
+.vocab { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 8px; margin: 0; }
+.vocab div { border: 1.5px solid var(--line); border-radius: 10px; padding: 8px 10px; background: var(--surface); }
+.vocab dt { font-weight: 700; }
+.vocab dd { margin: 2px 0 0; font-size: 15px; color: var(--muted); }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; }
+a.btn { text-decoration: none; display: inline-block; }
+.ai-note { font-size: 14px; color: var(--muted); margin: 0; }
+.ai-out { white-space: pre-wrap; }
+.dataset { background: var(--obj); border-radius: 10px; padding: 10px 12px; }
+/* dropdown question */
+.ddrow { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.ddrow label { font-weight: 600; }
+.ddrow select { font: inherit; color: var(--ink); background: var(--surface); border: 2px solid var(--line); border-radius: 10px; padding: 8px 10px; min-width: 150px; }
+.ddrow select:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.ddrow select.ok { border-color: var(--good); background: var(--good-bg); }
+.ddrow select.bad { border-color: var(--bad); background: var(--bad-bg); }
+/* drag and drop question */
+.dd-bank { display: flex; flex-wrap: wrap; gap: 10px; background: var(--obj); border: 1.5px solid var(--line); border-radius: 12px; padding: 12px; min-height: 64px; align-items: center; }
+.dd-bank.over { border-color: var(--accent); }
+.chipbtn { border: 2px solid var(--line); background: var(--surface); border-radius: 8px; padding: 8px 12px; font-weight: 600; cursor: grab; }
+.chipbtn[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 3px var(--orange-soft); }
+.chipbtn:disabled { cursor: default; }
+.dd-wrap { display: flex; gap: 12px; align-items: stretch; flex-wrap: wrap; }
+.dd-wrap .fig { flex: 0 0 auto; }
+.dd-wrap .fig svg { width: 210px; max-width: 100%; height: auto; }
+.dd-zones { display: flex; flex-direction: column; justify-content: space-between; gap: 12px; flex: 1 1 200px; min-width: 0; padding-block: 8px; }
+.zone { min-height: 56px; border: 2px dashed var(--muted); border-radius: 10px; display: flex; align-items: center; justify-content: center; padding: 4px; background: var(--surface); font-size: 14px; color: var(--muted); text-align: center; }
+.zone.over { border-color: var(--accent); background: var(--orange-soft); }
+.zone.ok { border: 2px solid var(--good); background: var(--good-bg); color: var(--ink); }
+.zone.bad { border: 2px solid var(--bad); background: var(--bad-bg); color: var(--ink); }
+.zone:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+/* matrix question */
+.mx { width: 100%; border-collapse: collapse; font-size: 15px; }
+.mx th, .mx td { border: 1.5px solid var(--line); padding: 8px 10px; text-align: center; vertical-align: middle; }
+.mx thead th { background: var(--obj); font-size: 14px; }
+.mx tbody th { text-align: left; font-weight: 600; background: var(--surface); min-width: 150px; }
+.mx input[type="radio"] { width: 22px; height: 22px; accent-color: var(--accent); }
+.mx .cellok { background: var(--good-bg); }
+.mx .cellbad { background: var(--bad-bg); }
+.vh { position: absolute; left: -9999px; }
+</style>
+
+<header class="band">
+  <div class="in">
+    <div class="logo" id="logo">
+      <img id="logo-img" alt="Celina Bobcats logo" hidden>
+      <svg id="logo-paw" viewBox="0 0 64 64" role="img" aria-label="Paw print" focusable="false">
+        <ellipse cx="32" cy="44" rx="15" ry="11" fill="#f26b1d"/>
+        <ellipse cx="13" cy="30" rx="6" ry="8.5" fill="#f26b1d" transform="rotate(-18 13 30)"/>
+        <ellipse cx="25" cy="17" rx="6" ry="9" fill="#f26b1d" transform="rotate(-6 25 17)"/>
+        <ellipse cx="39" cy="17" rx="6" ry="9" fill="#f26b1d" transform="rotate(6 39 17)"/>
+        <ellipse cx="51" cy="30" rx="6" ry="8.5" fill="#f26b1d" transform="rotate(18 51 30)"/>
+      </svg>
+    </div>
+    <div class="titles">
+      <p class="eyebrow">Moore Middle School · Celina ISD · Grade 8 Science</p>
+      <h1><span class="nw">8th Grade</span> <span class="nw">Science</span> <span class="nw">Unit 3</span> <span class="nw">Study Guide</span></h1>
+      <p class="sub">Unit: Newton's Laws of Motion · TEKS 8.7A and 8.7B</p>
+    </div>
+    <svg class="cradle" viewBox="0 0 180 120" role="img" aria-label="Newton's cradle: a row of steel balls on strings. One ball swings in and the ball on the other end swings out." focusable="false">
+      <g stroke="#3a4046" stroke-width="6" stroke-linecap="round" fill="none">
+        <line x1="14" y1="12" x2="166" y2="12"/><line x1="14" y1="12" x2="14" y2="108"/><line x1="166" y1="12" x2="166" y2="108"/><line x1="4" y1="108" x2="176" y2="108"/>
+      </g>
+      <g class="ball bl" style="transform-origin:50px 12px"><line x1="50" y1="12" x2="50" y2="74" stroke="#3a4046" stroke-width="1.8"/><circle cx="50" cy="84" r="10" fill="#e9ecef" stroke="#3a4046" stroke-width="2.5"/></g>
+      <g><line x1="70" y1="12" x2="70" y2="74" stroke="#3a4046" stroke-width="1.8"/><circle cx="70" cy="84" r="10" fill="#e9ecef" stroke="#3a4046" stroke-width="2.5"/></g>
+      <g><line x1="90" y1="12" x2="90" y2="74" stroke="#3a4046" stroke-width="1.8"/><circle cx="90" cy="84" r="10" fill="#e9ecef" stroke="#3a4046" stroke-width="2.5"/></g>
+      <g><line x1="110" y1="12" x2="110" y2="74" stroke="#3a4046" stroke-width="1.8"/><circle cx="110" cy="84" r="10" fill="#e9ecef" stroke="#3a4046" stroke-width="2.5"/></g>
+      <g class="ball br" style="transform-origin:130px 12px"><line x1="130" y1="12" x2="130" y2="74" stroke="#3a4046" stroke-width="1.8"/><circle cx="130" cy="84" r="10" fill="#e9ecef" stroke="#3a4046" stroke-width="2.5"/></g>
+    </svg>
+  </div>
+</header>
+
+<main class="in">
+  <nav class="tabs" aria-label="Study sections">
+    <button class="tab" id="tab-guide" type="button">Study guide</button>
+    <button class="tab" id="tab-cards" type="button">Flash cards</button>
+    <button class="tab" id="tab-quiz" type="button">Practice quiz</button>
+    <svg class="nimg" id="nimg" viewBox="30 0 70 64" role="img" aria-label="Rocket launching: gas pushed down, rocket pushed up (Newton's Third Law)" focusable="false">
+      <polygon points="54,4 46,20 62,20" fill="#f26b1d" stroke="currentColor" stroke-width="2"/>
+      <rect x="46" y="20" width="16" height="30" fill="#fff" stroke="currentColor" stroke-width="2"/>
+      <circle cx="54" cy="31" r="4" fill="#9aa3ad" stroke="currentColor" stroke-width="1.5"/>
+      <polygon points="46,40 38,54 46,50" fill="#f26b1d" stroke="currentColor" stroke-width="1.5"/>
+      <polygon points="62,40 70,54 62,50" fill="#f26b1d" stroke="currentColor" stroke-width="1.5"/>
+      <polygon points="48,50 60,50 54,62" fill="#f26b1d"/>
+      <g stroke="#f26b1d" stroke-width="3" stroke-linecap="round" fill="#f26b1d"><line x1="92" y1="54" x2="92" y2="24"/><polygon points="92,14 86,26 98,26" stroke="none"/></g>
+      <g stroke="#6b7280" stroke-width="3" stroke-linecap="round" fill="#6b7280"><line x1="76" y1="40" x2="76" y2="52"/><polygon points="76,62 70,50 82,50" stroke="none"/></g>
+    </svg>
+  </nav>
+
+  <section class="panel" id="view-guide" aria-label="Study guide">
+    <h2 class="h2">Study Guide</h2>
+    <div class="two">
+      <div class="box hot"><span class="chip">TEKS 8.7A</span><p><strong>Newton's Second Law.</strong> Calculate and analyze how the acceleration of an object depends on the net force on it and its mass.</p></div>
+      <div class="box hot"><span class="chip">TEKS 8.7B</span><p><strong>Three laws together.</strong> Investigate and describe how Newton's three laws act at the same time in systems such as vehicle restraints, sports, amusement park rides, Earth's tectonic activity and rocket launches.</p></div>
+    </div>
+
+    <div class="box">
+      <h3 class="h3">Formula station</h3>
+      <div class="formula">a = F ÷ m &nbsp;&nbsp; F = m × a &nbsp;&nbsp; m = F ÷ a</div>
+      <div class="tbl"><table>
+        <thead><tr><th>Quantity</th><th>Symbol</th><th>Unit</th></tr></thead>
+        <tbody>
+          <tr><td>Net force</td><td>F</td><td>newton (N)</td></tr>
+          <tr><td>Mass</td><td>m</td><td>kilogram (kg)</td></tr>
+          <tr><td>Acceleration</td><td>a</td><td>meters per second squared (m/s²)</td></tr>
+        </tbody></table></div>
+      <p><strong>Step 1: find the net force.</strong> Add forces that point the same way. Subtract forces that point opposite ways. The net force points toward the larger force.</p>
+      <p><strong>Step 2: use the formula.</strong> Rearrange it for what is missing, and write the unit.</p>
+    </div>
+
+    <div class="box">
+      <h3 class="h3">Worked examples</h3>
+      <ol>
+        <li><strong>Find acceleration.</strong> A 4 kg wagon is pulled right with 30 N while friction pushes left with 10 N. Net force = 30 − 10 = 20 N right. a = 20 N ÷ 4 kg = <strong>5 m/s² to the right</strong>.</li>
+        <li><strong>Find force.</strong> A 1,000 kg car speeds up at 3 m/s². F = 1,000 kg × 3 m/s² = <strong>3,000 N</strong>.</li>
+        <li><strong>Find mass.</strong> A net force of 36 N gives an object an acceleration of 9 m/s². m = 36 N ÷ 9 m/s² = <strong>4 kg</strong>.</li>
+      </ol>
+    </div>
+
+    <div class="box">
+      <h3 class="h3">Patterns to know</h3>
+      <ul>
+        <li>Double the net force on the same mass, and the acceleration doubles.</li>
+        <li>Double the mass with the same net force, and the acceleration is cut in half.</li>
+        <li>Balanced forces mean the net force is 0 N, so the acceleration is 0 m/s². The object stays at rest or keeps moving at a constant velocity.</li>
+        <li>Mass and weight are different. Mass (kg) stays the same everywhere. Weight is a force (N) that depends on gravity.</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3 class="h3">The three laws and their clues</h3>
+      <div class="tbl"><table>
+        <thead><tr><th>Law</th><th>In plain words</th><th>Clue in a question</th></tr></thead>
+        <tbody>
+          <tr><td>1st (inertia)</td><td>Motion does not change without an unbalanced force.</td><td>An object keeps moving, stays still, or resists a change.</td></tr>
+          <tr><td>2nd (F = ma)</td><td>More net force or less mass means more acceleration.</td><td>Speeding up, slowing down, turning, or comparing masses.</td></tr>
+          <tr><td>3rd (action-reaction)</td><td>Two objects push on each other with equal and opposite forces.</td><td>One object pushes or pulls another.</td></tr>
+        </tbody></table></div>
+    </div>
+
+    <div class="box">
+      <h3 class="h3">All three laws in real systems (8.7B)</h3>
+      <details class="acc"><summary>Vehicle restraints: seat belts and airbags</summary><div class="in2"><p><strong>1st:</strong> in a sudden stop, a passenger's body keeps moving forward.</p><p><strong>2nd:</strong> the belt applies a force that slows the passenger. An airbag spreads the stopping over more time, so the force on the body is smaller.</p><p><strong>3rd:</strong> the passenger pushes on the belt, and the belt pushes back equally.</p></div></details>
+      <details class="acc"><summary>Sports: kicking or hitting a ball</summary><div class="in2"><p><strong>3rd:</strong> the foot pushes on the ball and the ball pushes back on the foot.</p><p><strong>2nd:</strong> a lighter ball with the same force accelerates more.</p><p><strong>1st:</strong> after the kick, the ball keeps moving until gravity, air resistance and friction change its motion.</p></div></details>
+      <details class="acc"><summary>Amusement park rides: roller coasters</summary><div class="in2"><p><strong>2nd:</strong> gravity pulling the car down a hill creates a net force, so the car speeds up.</p><p><strong>1st:</strong> riders tend to keep moving in a straight line, so they feel pushed to the side in a turn.</p><p><strong>3rd:</strong> the seat pushes on the rider, and the rider pushes on the seat.</p></div></details>
+      <details class="acc"><summary>Earth's tectonic activity</summary><div class="in2"><p><strong>1st:</strong> plates stay locked while friction balances the forces on them.</p><p><strong>2nd:</strong> when forces build beyond friction, the net force is unbalanced and the rock accelerates, causing an earthquake.</p><p><strong>3rd:</strong> plates push on each other with equal and opposite forces where they meet.</p></div></details>
+      <details class="acc"><summary>Rocket launches</summary><div class="in2"><p><strong>3rd:</strong> the rocket pushes exhaust gas down, and the gas pushes the rocket up.</p><p><strong>2nd:</strong> when thrust is greater than the rocket's weight, the net force points up and the rocket accelerates. As fuel burns, the mass drops and the acceleration grows.</p><p><strong>1st:</strong> in space, with no net force, the rocket coasts at a constant velocity.</p></div></details>
+    </div>
+
+    <div class="box">
+      <h3 class="h3">Mistakes to avoid</h3>
+      <ul>
+        <li>Action and reaction forces do NOT cancel, because they act on different objects.</li>
+        <li>An object in motion does not need a net force to keep moving. It needs a net force to change its motion.</li>
+        <li>Friction is a force too. Include it when you find the net force.</li>
+      </ul>
+    </div>
+
+    <details class="acc"><summary>Vocabulary list</summary><div class="in2"><dl class="vocab" id="vocab-list"></dl></div></details>
+
+    <div class="cta">
+      <a class="btn primary" href="#cards">Practice with flash cards</a>
+      <a class="btn" href="#quiz">Take the quiz</a>
+    </div>
+  </section>
+
+  <section class="panel" id="view-cards" aria-label="Flash cards" hidden></section>
+  <section class="panel" id="view-quiz" aria-label="Practice quiz" hidden></section>
+
+
+</main>
+
+<script>
+(function () {
+  var LOGO_SRC = '';
+  var AI = { sample: null };
+  /* ---------- illustration helpers ---------- */
+  function arrow(x1, y1, x2, y2, cls, w) {
+    w = w || 3.5;
+    var dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy), ux = dx / len, uy = dy / len, hs = 10;
+    var bx = x2 - ux * hs, by = y2 - uy * hs, px = -uy * 5.5, py = ux * 5.5;
+    return '<g class="arr ' + cls + '"><line x1="' + x1 + '" y1="' + y1 + '" x2="' + bx + '" y2="' + by + '" stroke-width="' + w + '"/>' +
+      '<polygon points="' + x2 + ',' + y2 + ' ' + (bx + px) + ',' + (by + py) + ' ' + (bx - px) + ',' + (by - py) + '"/></g>';
+  }
+  function t(x, y, s, anchor, cls) {
+    return '<text class="' + (cls || 'lbl') + '" x="' + x + '" y="' + y + '" text-anchor="' + (anchor || 'middle') + '">' + s + '</text>';
+  }
+  function crate(x, y, w, h, extra) { return '<rect class="obj" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="4"' + (extra || '') + '/>'; }
+  function ground(y) { return '<line class="gnd" x1="6" y1="' + y + '" x2="214" y2="' + y + '"/>'; }
+  function svg(body, caption, showCaption) {
+    var cap = '';
+    if (showCaption && caption) {
+      caption.forEach(function (line, i) { cap += t(110, 118 + i * 13, line, 'middle', 'cap'); });
+    }
+    return '<svg viewBox="0 0 220 134" role="img" aria-hidden="true" focusable="false">' + body + cap + '</svg>';
+  }
+
+  /* ---------- flash card data ---------- */
+  var CARDS = [
+    { id: 'force', term: 'Force', tag: '8.7A · 8.7B', def: 'A push or a pull on an object, measured in newtons (N).',
+      cap: ['A force is a push or a pull'],
+      art: ground(104) + crate(100, 72, 36, 32) + arrow(24, 88, 98, 88, 'f') + t(60, 78, 'push 20 N') },
+    { id: 'net', term: 'Net force', tag: '8.7A', def: 'The total of all forces acting on an object. Add forces that point the same way and subtract forces that point in opposite ways.',
+      cap: ['50 N right − 20 N left = 30 N right'],
+      art: ground(104) + crate(88, 66, 44, 38) + arrow(136, 85, 206, 85, 'f') + t(172, 75, '50 N') + arrow(84, 85, 56, 85, 'r') + t(68, 75, '20 N') },
+    { id: 'balanced', term: 'Balanced forces', tag: '8.7A', def: 'Forces that cancel out, so the net force is 0 N and the motion does not change.',
+      cap: ['30 N = 30 N, so the net force is 0 N'],
+      art: ground(104) + crate(88, 66, 44, 38) + arrow(136, 85, 176, 85, 'f') + t(158, 75, '30 N') + arrow(84, 85, 44, 85, 'f') + t(64, 75, '30 N') },
+    { id: 'unbalanced', term: 'Unbalanced forces', tag: '8.7A', def: 'Forces that do not cancel out. The net force is greater than 0 N, so the object accelerates.',
+      cap: ['60 N − 20 N = 40 N net force', 'The crate accelerates to the right'],
+      art: ground(104) + crate(88, 66, 44, 38) + arrow(136, 85, 206, 85, 'f') + t(172, 75, '60 N') + arrow(84, 85, 64, 85, 'f') + t(72, 75, '20 N') },
+    { id: 'mass', term: 'Mass', tag: '8.7A', def: 'The amount of matter in an object, measured in kilograms (kg). It does not change with location.',
+      cap: ['Mass is the amount of matter (kg)'],
+      art: ground(104) + crate(40, 76, 28, 28) + t(54, 94, '2 kg') + crate(100, 56, 70, 48) + t(135, 84, '8 kg') },
+    { id: 'accel', term: 'Acceleration', tag: '8.7A', def: 'A change in an object’s speed or direction, measured in meters per second squared (m/s²).',
+      cap: ['Speeding up: the gaps get bigger', 'Acceleration is measured in m/s²'],
+      art: ground(104) + crate(14, 76, 26, 28, ' style="opacity:.25"') + crate(50, 76, 26, 28, ' style="opacity:.45"') + crate(98, 76, 26, 28, ' style="opacity:.7"') + crate(158, 76, 26, 28) + arrow(20, 58, 196, 58, 'n') },
+    { id: 'newton', term: 'Newton (N)', tag: '8.7A', def: 'The unit of force. One newton is the force that gives a 1 kg mass an acceleration of 1 m/s².',
+      cap: ['1 N gives 1 kg an acceleration of 1 m/s²'],
+      art: '<text class="big" x="110" y="52" text-anchor="middle">1 N</text>' + t(110, 78, '= 1 kg·m/s²') + ground(104) + crate(40, 84, 20, 20) + arrow(8, 94, 38, 94, 'f') + arrow(66, 94, 106, 94, 'n') },
+    { id: 'first', term: 'Newton’s First Law', tag: '8.7B', def: 'An object at rest stays at rest, and an object in motion keeps moving at the same speed in a straight line, unless an unbalanced force acts on it.',
+      cap: ['No net force: same speed, straight line'],
+      art: ground(104) + '<line class="dash" x1="18" y1="93" x2="96" y2="93"/>' + crate(100, 82, 34, 22) + arrow(140, 93, 204, 93, 'n') + t(172, 82, 'constant v') },
+    { id: 'inertia', term: 'Inertia', tag: '8.7B', def: 'The tendency of an object to resist changes in its motion. More mass means more inertia.',
+      cap: ['The cart stops at the wall', 'but the ball keeps moving forward'],
+      art: ground(104) + '<rect class="obj" x="70" y="84" width="72" height="12" rx="3"/><circle class="obj" cx="84" cy="100" r="5"/><circle class="obj" cx="128" cy="100" r="5"/><circle class="obj" cx="130" cy="75" r="9"/>' + '<rect class="obj" x="170" y="56" width="8" height="48"/>' + arrow(142, 75, 164, 75, 'r') },
+    { id: 'second', term: 'Newton’s Second Law', tag: '8.7A · 8.7B', def: 'The acceleration of an object depends on the net force on it and its mass: a = F ÷ m. More force means more acceleration. More mass means less acceleration.',
+      cap: ['Same 12 N push on each cart', 'More mass, less acceleration'],
+      art: crate(34, 14, 28, 24) + t(48, 30, '2 kg') + arrow(6, 26, 32, 26, 'f') + arrow(68, 26, 150, 26, 'n') + t(156, 29, '6 m/s²', 'start') +
+        crate(34, 56, 46, 32) + t(57, 76, '4 kg') + arrow(6, 72, 32, 72, 'f') + arrow(86, 72, 120, 72, 'n') + t(126, 75, '3 m/s²', 'start') },
+    { id: 'third', term: 'Newton’s Third Law', tag: '8.7B', def: 'For every action force, there is an equal and opposite reaction force.',
+      cap: ['Equal and opposite forces', 'that act on different objects'],
+      art: ground(104) + crate(60, 66, 42, 38) + t(81, 90, 'A') + crate(106, 66, 42, 38) + t(127, 90, 'B') + arrow(104, 50, 54, 50, 'r') + t(78, 42, 'on A') + arrow(104, 50, 154, 50, 'f') + t(130, 42, 'on B') },
+    { id: 'pair', term: 'Action-reaction pair', tag: '8.7B', def: 'Two forces of equal size and opposite direction that act on two different objects. They do not cancel because they act on different objects.',
+      cap: ['Each force is 10 N, in opposite directions'],
+      art: ground(104) + '<rect class="obj" x="14" y="76" width="56" height="22" rx="10"/>' + t(42, 91, 'foot') + '<circle class="obj" cx="94" cy="84" r="14"/>' + arrow(82, 52, 28, 52, 'r') + t(52, 44, 'ball on foot') + arrow(82, 52, 138, 52, 'f') + t(112, 44, 'foot on ball', 'start') },
+    { id: 'friction', term: 'Friction', tag: '8.7B', def: 'A force that opposes motion between surfaces that touch.',
+      cap: ['Friction opposes motion', 'between surfaces that touch'],
+      art: crate(84, 66, 44, 34) + '<polyline class="teeth" points="6,104 14,100 22,104 30,100 38,104 46,100 54,104 62,100 70,104 78,100 86,104 94,100 102,104 110,100 118,104 126,100 134,104 142,100 150,104 158,100 166,104 174,100 182,104 190,100 198,104 206,100 214,104"/>' + arrow(132, 82, 196, 82, 'f') + t(164, 72, 'pull') + arrow(80, 94, 34, 94, 'r') + t(56, 86, 'opposing force') }
+  ];
+
+  function car(x, y) {
+    return '<rect class="obj" x="' + x + '" y="' + (y + 16) + '" width="84" height="22" rx="7"/><rect class="obj" x="' + (x + 20) + '" y="' + y + '" width="44" height="18" rx="5"/>' +
+      '<circle class="obj" cx="' + (x + 20) + '" cy="' + (y + 40) + '" r="8"/><circle class="obj" cx="' + (x + 64) + '" cy="' + (y + 40) + '" r="8"/>';
+  }
+  var QUIZ = [
+    { q: 'You push a 5 kg shopping cart with a net force of 20 N. What is the cart’s acceleration?',
+      art: ground(104) + crate(84, 62, 56, 30) + '<circle class="obj" cx="96" cy="98" r="6"/><circle class="obj" cx="128" cy="98" r="6"/>' + t(112, 82, '5 kg') + arrow(20, 76, 80, 76, 'f') + t(50, 66, '20 N'),
+      c: '4 m/s²', why: 'Use a = F ÷ m. 20 N ÷ 5 kg = 4 m/s².',
+      w: [{ t: '0.25 m/s²', why: 'That is 5 ÷ 20, which flips the formula. Divide the force by the mass, not the mass by the force.' },
+          { t: '15 m/s²', why: 'That subtracts the mass from the force. Acceleration is net force divided by mass.' },
+          { t: '100 m/s²', why: 'That multiplies 20 × 5. Multiplying is how you find force when you know mass and acceleration.' }] },
+    { q: 'You push an empty wagon (2 kg) and then the same wagon loaded with books (4 kg), using the same 12 N net force both times. Which statement is correct?',
+      art: ground(104) + crate(60, 74, 36, 30) + t(78, 93, '2 kg') + arrow(14, 88, 56, 88, 'f') + t(35, 78, '12 N') + t(150, 91, 'a = ?', 'start'),
+      c: 'The empty wagon accelerates twice as much as the loaded wagon.', why: 'a = 12 ÷ 2 = 6 m/s² for the empty wagon, and 12 ÷ 4 = 3 m/s² for the loaded wagon.',
+      w: [{ t: 'Both wagons have the same acceleration.', why: 'The force is the same, but the masses are different. More mass means less acceleration.' },
+          { t: 'The loaded wagon accelerates twice as much as the empty wagon.', why: 'This reverses the relationship. The heavier wagon accelerates less, not more.' },
+          { t: 'Neither wagon accelerates.', why: 'The net force is 12 N, which is greater than 0 N, so both wagons accelerate.' }] },
+    { q: 'A 1,500 kg car speeds up at 2 m/s² as it leaves a stoplight. What is the net force on the car?',
+      art: ground(104) + car(60, 48) + arrow(150, 84, 204, 84, 'f') + t(176, 74, 'F = ?') + t(10, 20, '1,500 kg', 'start') + t(10, 34, 'a = 2 m/s²', 'start'),
+      c: '3,000 N', why: 'Use F = m × a. 1,500 kg × 2 m/s² = 3,000 N.',
+      w: [{ t: '750 N', why: 'That divides 1,500 by 2. To find force, multiply mass by acceleration.' },
+          { t: '1,502 N', why: 'That adds the numbers. Force is found by multiplying mass and acceleration.' },
+          { t: '3 N', why: 'This drops the thousands. 1,500 × 2 is 3,000, not 3.' }] },
+    { q: 'In a tug of war, Team A pulls the rope right with 500 N and Team B pulls it left with 450 N. What is the net force on the rope?',
+      art: '<line x1="20" y1="82" x2="200" y2="82" stroke="var(--ink)" stroke-width="4"/><rect class="obj" x="102" y="74" width="16" height="16" rx="2"/>' + arrow(122, 56, 200, 56, 'f') + t(162, 46, 'Team A: 500 N') + arrow(98, 56, 28, 56, 'f') + t(62, 46, 'Team B: 450 N'),
+      c: '50 N to the right', why: 'Subtract forces in opposite directions: 500 − 450 = 50 N, toward the stronger team.',
+      w: [{ t: '950 N to the right', why: 'That adds the forces. These forces point in opposite directions, so you subtract them.' },
+          { t: '50 N to the left', why: 'The size is right, but the direction is wrong. The net force points toward the larger force (Team A).' },
+          { t: '0 N', why: 'The forces would only cancel if they were equal. 500 N and 450 N are not equal.' }] },
+    { q: 'A slapshot gives a hockey puck an acceleration of 100 m/s² with a net force of 17 N. What is the mass of the puck?',
+      art: ground(104) + '<ellipse class="obj" cx="120" cy="96" rx="20" ry="8"/>' + arrow(30, 90, 94, 90, 'f') + t(62, 80, '17 N') + arrow(150, 90, 206, 90, 'n') + t(178, 80, '100 m/s²'),
+      c: '0.17 kg', why: 'Rearrange F = m × a to m = F ÷ a. 17 N ÷ 100 m/s² = 0.17 kg.',
+      w: [{ t: '1,700 kg', why: 'That multiplies the numbers. To find mass, divide force by acceleration.' },
+          { t: '5.9 kg', why: 'That divides acceleration by force (100 ÷ 17). It is upside down. Use force ÷ acceleration.' },
+          { t: '83 kg', why: 'That subtracts the numbers. Mass comes from dividing force by acceleration.' }] },
+    { q: 'You are riding in a car that stops suddenly at a red light, and your body lurches forward. Which law best explains this?',
+      art: ground(104) + car(50, 48) + '<circle class="obj" cx="108" cy="52" r="6"/>' + '<line class="dash" x1="114" y1="50" x2="164" y2="50"/>' + arrow(150, 50, 176, 50, 'r') + arrow(60, 100, 24, 100, 'r') + t(42, 90, 'brakes'),
+      c: 'Newton’s First Law', why: 'This is inertia. Your body keeps moving forward until a force, such as a seat belt, changes its motion.',
+      w: [{ t: 'Newton’s Third Law', why: 'The third law is about force pairs between two objects. It does not explain why your body keeps moving forward.' },
+          { t: 'Newton’s Second Law', why: 'The second law links force, mass and acceleration. The lurch happens because of inertia, which is the first law.' },
+          { t: 'The law of conservation of mass', why: 'Your mass does not change when the car stops, so this law does not explain the lurch.' }] },
+    { q: 'A rocket lifts off as it blasts hot gas downward. Which law best explains the force that pushes the rocket upward?',
+      art: '<polygon class="obj" points="110,10 98,30 122,30"/><rect class="obj" x="98" y="30" width="24" height="52"/><polygon class="obj" points="98,70 86,92 98,82"/><polygon class="obj" points="122,70 134,92 122,82"/>' + arrow(72, 44, 72, 108, 'r') + t(72, 124, 'gas pushed down', 'middle', 'cap') + arrow(150, 100, 150, 30, 'f') + t(150, 124, 'rocket pushed up', 'middle', 'cap'),
+      c: 'Newton’s Third Law', why: 'The rocket pushes the gas down, so the gas pushes the rocket up with an equal and opposite force.',
+      w: [{ t: 'Newton’s First Law', why: 'The first law explains how motion continues without a net force. A rocket lifting off is being pushed by a force.' },
+          { t: 'The law of conservation of energy', why: 'Energy is conserved in a launch, but this question asks about the force that pushes the rocket up.' },
+          { t: 'The law of universal gravitation', why: 'Gravity pulls the rocket down, not up.' }] },
+    { q: 'Observe the illustration. A student stands in a small rowboat that is floating still on a calm lake. The student jumps toward the dock in the direction shown by the top arrow. Based on the law of action-reaction, which numbered arrow shows the most likely direction the rowboat will move?',
+      art: '<line class="gnd" x1="6" y1="98" x2="214" y2="98"/><polygon class="obj" points="78,84 142,84 132,98 88,98"/><circle class="obj" cx="110" cy="50" r="7"/><line class="gnd" x1="110" y1="57" x2="110" y2="72"/><line class="gnd" x1="110" y1="72" x2="102" y2="84"/><line class="gnd" x1="110" y1="72" x2="118" y2="84"/><line class="gnd" x1="110" y1="62" x2="122" y2="68"/>' + arrow(124, 28, 204, 28, 'n') + t(164, 18, 'student jumps', 'middle', 'cap') + arrow(148, 90, 208, 90, 'f') + t(178, 122, '1', 'middle', 'big') + arrow(110, 104, 110, 130, 'f') + t(126, 124, '2', 'middle', 'big') + arrow(72, 90, 12, 90, 'f') + t(42, 122, '3', 'middle', 'big') + arrow(40, 74, 40, 36, 'f') + t(22, 62, '4', 'middle', 'big'),
+      c: 'Arrow 3', why: 'The student pushes the boat backward (toward the left) to jump forward, so the boat pushes the student forward with an equal and opposite force (third law). The boat is pushed opposite to the jump, so it moves left.',
+      w: [{ t: 'Arrow 1', why: 'Arrow 1 points the same way as the jump. The action-reaction pair points in opposite directions, so the boat moves the opposite way.' },
+          { t: 'Arrow 2', why: 'Arrow 2 points straight down, but the student’s push on the boat is sideways, not downward. The boat is pushed sideways, opposite to the jump.' },
+          { t: 'Arrow 4', why: 'Arrow 4 points straight up. The jump is sideways, so the reaction on the boat is sideways too, in the opposite direction.' }] },
+    { q: 'Four objects are in motion. Which one shows balanced forces? (Hint: balanced forces mean the net force is 0 N, so the motion does not change.)',
+      table: '<ol style="margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:6px"><li>A soccer ball rolls down a hill and speeds up.</li><li>A hockey puck slides in a straight line across smooth ice at a steady speed.</li><li>A basketball falls off a roof and speeds up.</li><li>A tennis ball is hit straight up and slows down as it rises.</li></ol>',
+      c: 'Object 2, the hockey puck', why: 'The puck keeps the same speed and the same direction, so its motion is not changing. That means the net force is 0 N and the forces are balanced.',
+      w: [{ t: 'Object 1, the soccer ball', why: 'The ball speeds up. A change in speed means the forces are unbalanced and there is a net force.' },
+          { t: 'Object 3, the basketball', why: 'The ball speeds up as it falls. Gravity pulls down harder than air resistance pushes up, so the forces are unbalanced.' },
+          { t: 'Object 4, the tennis ball', why: 'The ball slows down. A change in speed means the forces are unbalanced and there is a net force.' }] },
+    { q: 'A delivery driver is carrying a 12 kg box of oranges on the passenger seat of a van traveling at 55 mph. A soccer ball rolls into the road, and the driver slams on the brakes. The van stops quickly, but the box slides off the seat and hits the dashboard. Which of Newton’s laws best explains why it is safer to buckle up and to strap down anything you carry in a vehicle?',
+      c: 'The law of inertia', why: 'The first law says an object keeps moving at the same speed and direction unless an unbalanced force acts on it. The van stops, but the box keeps moving forward until something stops it. A seatbelt or strap supplies that force safely.',
+      w: [{ t: 'The law of force and acceleration', why: 'The second law (F = ma) tells how much force it takes to change motion. But the question asks why the box keeps moving forward when the van stops, and that is inertia.' },
+          { t: 'The law of conservation of mass', why: 'This law says mass is not created or destroyed. It does not explain why objects keep moving when a vehicle stops. Also, it is not one of Newton’s laws.' },
+          { t: 'The law of action-reaction', why: 'The third law is about pairs of forces between two objects. The box slides forward because it keeps its motion, not because of a force pair pushing it.' }] },
+    { q: 'A student inflates a balloon, tapes it to a straw on a string, and lets go, as shown. The air rushes out the back and the balloon zips forward along the string. How do Newton’s laws BEST explain how the balloon starts moving?',
+      art: '<line class="gnd" x1="6" y1="64" x2="214" y2="64"/><ellipse class="obj" cx="140" cy="76" rx="40" ry="22"/><polygon class="obj" points="100,70 88,76 100,82"/>' + arrow(84, 76, 28, 76, 'r') + t(52, 102, 'released air', 'middle', 'cap') + arrow(160, 112, 214, 112, 'f') + t(188, 128, 'balloon moves', 'middle', 'cap') + t(140, 54, 'string', 'middle', 'cap'),
+      c: 'Unbalanced forces start the balloon moving forward, and it loses mass and inertia as air leaves.', why: 'Before release, the forces on the balloon are balanced. When the air rushes out, it pushes back on the surroundings and the air pushes the balloon forward (third law). That forward push is not balanced by anything, so the balloon accelerates (second law). Losing air also lowers its mass, so its inertia gets smaller.',
+      w: [{ t: 'Balanced forces start the balloon moving forward, and it gains inertia as air leaves.', why: 'Balanced forces cannot change an object’s motion. The balloon speeds up, so the forces must be unbalanced. Also, air leaving means less mass, so inertia goes down, not up.' },
+          { t: 'Balanced forces start the balloon moving forward as the balloon’s mass and inertia change.', why: 'Balanced forces mean zero net force and no change in motion. A balloon that speeds up from rest has a net force on it.' },
+          { t: 'Unbalanced forces that kept the balloon at rest become balanced as the balloon launches.', why: 'It is the other way around. The forces were balanced while the balloon sat still, and they became unbalanced when the air was released.' }] },
+    { q: 'A roller coaster car speeds up as it rolls down a hill. Which statement correctly describes how Newton’s laws act on this system?',
+      art: '<polyline points="6,34 80,34 150,100 214,100" fill="none" stroke="var(--ink)" stroke-width="3"/><g transform="translate(110 60) rotate(43)"><rect class="obj" x="-14" y="-12" width="28" height="12" rx="3"/></g>' + arrow(118, 62, 146, 90, 'f') + t(150, 60, 'gravity pulls', 'start', 'cap'),
+      c: 'Gravity gives a net force that speeds up the car (2nd), riders tend to keep moving straight (1st), and the seat and riders push on each other (3rd).',
+      why: 'All three laws act at the same time in real systems.',
+      w: [{ t: 'Only the second law applies because the car is accelerating.', why: 'The second law does apply, but the first and third laws are also acting on the car and riders.' },
+          { t: 'Only the first law applies because the riders feel pushed into their seats.', why: 'Riders feel pushed into the seat because of inertia (1st law), but the car’s speeding up needs the second law too.' },
+          { t: 'The laws take turns, depending on how fast the ride is going.', why: 'Newton’s laws never take turns. They all describe the motion at the same time.' }] },
+    { q: 'When a swimmer pushes the water backward with her hands, she moves forward. What is the reaction force to her push on the water?',
+      art: '<path d="M6,70 Q30,62 55,70 T105,70 T155,70 T214,70" fill="none" stroke="var(--force)" stroke-width="2.5"/><ellipse class="obj" cx="120" cy="64" rx="26" ry="8"/><circle class="obj" cx="152" cy="60" r="7"/>' + arrow(100, 82, 56, 82, 'r') + t(78, 98, 'push on water', 'middle', 'cap') + arrow(130, 100, 180, 100, 'f') + t(156, 116, 'reaction?', 'middle', 'cap'),
+      c: 'The water pushes the swimmer forward with an equal force.', why: 'Action-reaction forces are equal and opposite and act on two different objects: swimmer on water, and water on swimmer.',
+      w: [{ t: 'The swimmer’s weight pulls her down.', why: 'Weight is the pull of gravity on the swimmer. It is not the reaction to her push on the water.' },
+          { t: 'The pool floor pushes the swimmer forward.', why: 'The swimmer is not pushing on the floor, so the floor cannot be part of this force pair.' },
+          { t: 'There is no reaction force because the water moves.', why: 'Every action force has a reaction force, even when one of the objects moves.' }] },
+    { q: 'A 2 kg book sits at rest on a table. Gravity pulls down with 20 N and the table pushes up with 20 N. What is the book’s acceleration?',
+      art: '<line class="gnd" x1="40" y1="84" x2="180" y2="84"/>' + crate(92, 58, 36, 26) + arrow(110, 58, 110, 14, 'f') + t(124, 30, '20 N', 'start') + arrow(110, 84, 110, 126, 'f') + t(124, 112, '20 N', 'start'),
+      c: '0 m/s²', why: 'The forces are balanced (20 N up, 20 N down), so the net force is 0 N and a = 0 ÷ 2 = 0 m/s².',
+      w: [{ t: '10 m/s²', why: 'That divides one force by the mass. You must find the net force first. Here it is 0 N.' },
+          { t: '9.8 m/s²', why: 'That is the acceleration of a falling object. The table is holding this book up, so it is not falling.' },
+          { t: '20 m/s²', why: 'That uses only one of the two forces. The forces cancel, so the net force is 0 N.' }] },
+    { q: 'A student pulls the same wagon with different net forces and records: 10 N gives 2 m/s², 20 N gives 4 m/s², 30 N gives 6 m/s². What is the mass of the wagon?',
+      art: ground(104) + crate(100, 72, 42, 32) + t(121, 92, '? kg') + arrow(30, 88, 96, 88, 'f') + t(63, 78, '10, 20, 30 N'),
+      c: '5 kg', why: 'm = F ÷ a = 10 N ÷ 2 m/s² = 5 kg. It is also 20 ÷ 4 and 30 ÷ 6.',
+      w: [{ t: '0.2 kg', why: 'That divides acceleration by force (2 ÷ 10). Use force ÷ acceleration.' },
+          { t: '20 kg', why: 'That multiplies 10 × 2. Mass is force divided by acceleration.' },
+          { t: '12 kg', why: 'That adds 10 and 2. Mass comes from dividing, not adding.' }] },
+    { q: 'The diagram shows three forces acting on a 40 kg box. Use the diagram to answer each part. Choose one answer from each menu.',
+      dds: { mass: 40,
+        parts: [
+          { label: 'What is the net force acting on the box?', opts: ['0 N', '30 N', '65 N', '95 N', '160 N'], ans: '30 N',
+            why: 'Add the forces that point the same way: 37 N + 28 N = 65 N to the right. Then subtract from the opposite force: 95 N − 65 N = 30 N.',
+            wrong: { '0 N': 'The forces would only balance if both sides were equal. 95 N and 65 N are not equal.', '65 N': 'That is only the two forces on the left added together. You also need to subtract them from the 95 N force.', '95 N': 'That is only the biggest force. The other two forces push back, so subtract them.', '160 N': 'That adds all three forces. Forces that point in opposite directions are subtracted, not added.' } },
+          { label: 'What direction will the box move?', opts: ['left', 'right', 'it will not move'], ans: 'left',
+            why: 'The net force points in the direction of the larger total force. The 95 N force pushes left and the other two total only 65 N pushing right.',
+            wrong: { 'right': 'The two forces pushing right add up to 65 N, which is less than the 95 N pushing left.', 'it will not move': 'The forces are not balanced. The net force is 30 N, so the box accelerates.' } },
+          { label: 'What is the box’s acceleration?', opts: ['0 m/s²', '0.75 m/s²', '1.33 m/s²', '30 m/s²', '1,200 m/s²'], ans: '0.75 m/s²',
+            why: 'Use a = F ÷ m with the net force. 30 N ÷ 40 kg = 0.75 m/s².',
+            wrong: { '0 m/s²': 'The net force is 30 N, not 0 N, so the box accelerates.', '1.33 m/s²': 'That divides the mass by the force (40 ÷ 30), which is upside down. Divide force by mass.', '30 m/s²': 'That is the net force, not the acceleration. Divide it by the mass.', '1,200 m/s²': 'That multiplies 30 × 40. To find acceleration, divide the net force by the mass.' } }
+        ] },
+      c: 'Net force 30 N, direction left, acceleration 0.75 m/s².',
+      why: 'Net force = 95 − (37 + 28) = 30 N to the left. a = 30 N ÷ 40 kg = 0.75 m/s² to the left.' },
+    { q: 'Four dump trucks are leaving a construction site and entering a road. Their masses and net forces are recorded below. Which dump truck will have the greatest acceleration?',
+      table: '<table><caption>Dump Truck Measurements</caption><thead><tr><th>Dump truck</th><th>Mass (kg)</th><th>Net force (N)</th></tr></thead><tbody><tr><td>1</td><td>5,600</td><td>8,400</td></tr><tr><td>2</td><td>6,400</td><td>9,800</td></tr><tr><td>3</td><td>6,400</td><td>8,400</td></tr><tr><td>4</td><td>4,800</td><td>9,800</td></tr></tbody></table>',
+      c: 'Dump truck 4 because the mass is less and the force is greater compared to other dump trucks.',
+      why: 'Use a = F ÷ m. Truck 1: 8,400 ÷ 5,600 = 1.5 m/s². Truck 2: 9,800 ÷ 6,400 ≈ 1.53 m/s². Truck 3: 8,400 ÷ 6,400 ≈ 1.31 m/s². Truck 4: 9,800 ÷ 4,800 ≈ 2.04 m/s². Truck 4 has the least mass and the greatest force, so it has the greatest acceleration.',
+      w: [{ t: 'Dump truck 1 because the mass and force are less compared to other dump trucks.', why: 'Less force does not help. Less force lowers the acceleration, and Truck 1 does not have the least mass. Its acceleration is 8,400 ÷ 5,600 = 1.5 m/s², which is less than Truck 4.' },
+          { t: 'Dump truck 2 because the mass and force are greater compared to other dump trucks.', why: 'More force helps, but more mass cancels it out. Truck 2 has a large mass, so its acceleration is only about 1.53 m/s², much less than Truck 4.' },
+          { t: 'Dump truck 3 because the mass is greater and the force is less compared to other dump trucks.', why: 'This is the opposite of what you want. A large mass and a small force give the smallest acceleration of the four, about 1.31 m/s².' }] },
+    { q: 'For each situation, choose what happens to the acceleration of an object. Pick one answer in every row.',
+      matrix: {
+        cols: ['Acceleration increases', 'Acceleration decreases', 'No change in acceleration'],
+        rows: [
+          { label: 'Net force and mass increase proportionally', ans: 2, why: 'Acceleration depends on the ratio of net force to mass (a = F ÷ m). If both double, the ratio stays the same. Example: 10 N ÷ 2 kg = 5 m/s² and 20 N ÷ 4 kg = 5 m/s².' },
+          { label: 'Net force stays the same, mass increases', ans: 1, why: 'The same force spread over more mass gives a smaller acceleration. Example: 12 N ÷ 2 kg = 6 m/s², but 12 N ÷ 4 kg = 3 m/s².' },
+          { label: 'Net force increases, mass stays the same', ans: 0, why: 'More force on the same mass gives a bigger acceleration. Example: 10 N ÷ 5 kg = 2 m/s², but 20 N ÷ 5 kg = 4 m/s².' }
+        ]
+      },
+      c: 'Row 1: no change. Row 2: acceleration decreases. Row 3: acceleration increases.',
+      why: 'Newton’s Second Law says a = F ÷ m, so only the ratio of net force to mass matters.' },
+    { q: 'Several students built remote-control toy boats from different materials and used different motors. The table gives details about each boat. Which toy boat will have the greatest acceleration?',
+      table: '<table><thead><tr><th>Boat</th><th>Mass (kilograms)</th><th>Force exerted by motor (newtons)</th></tr></thead><tbody><tr><td>1</td><td>0.80</td><td>1.2</td></tr><tr><td>2</td><td>0.50</td><td>1.0</td></tr><tr><td>3</td><td>0.25</td><td>0.4</td></tr><tr><td>4</td><td>1.20</td><td>2.0</td></tr></tbody></table>',
+      c: 'Boat 2', why: 'Use a = F ÷ m for each boat. Boat 1: 1.2 ÷ 0.80 = 1.5 m/s². Boat 2: 1.0 ÷ 0.50 = 2.0 m/s². Boat 3: 0.4 ÷ 0.25 = 1.6 m/s². Boat 4: 2.0 ÷ 1.20 ≈ 1.67 m/s². Boat 2 is greatest.',
+      w: [{ t: 'Boat 1', why: 'Boat 1 has an acceleration of 1.2 ÷ 0.80 = 1.5 m/s², which is the lowest of the four.' },
+          { t: 'Boat 3', why: 'Boat 3 has the smallest mass, but its motor force is also small. 0.4 ÷ 0.25 = 1.6 m/s², which is less than Boat 2. Compare force and mass together.' },
+          { t: 'Boat 4', why: 'Boat 4 has the biggest motor force, but it also has the biggest mass. 2.0 ÷ 1.20 ≈ 1.67 m/s², which is less than Boat 2. Compare force and mass together.' }] },
+    { q: 'The diagram shows two arrows that represent the directions of two forces acting on a 3-kilogram ball. The arrows do not show amounts of force. They only show directions. How should the diagram be labeled if the ball is accelerating to the north at a rate of 2 m/s²? Move the correct answer to each box. Not all answers will be used.',
+      dd: { mass: 3, a: 2, chips: [4, 7, 9, 12, 15], top: 9, bottom: 15 },
+      c: 'Top arrow: 9 newtons. Bottom arrow: 15 newtons.',
+      why: 'Net force = m × a = 3 kg × 2 m/s² = 6 N to the north. The top arrow points south and the bottom arrow points north, so the north force must be 6 N larger than the south force. Only 15 N and 9 N differ by 6 N, with 15 N on the north (bottom) arrow.' },
+  ];
+
+  /* ---------- utilities ---------- */
+  function shuffle(a) { var b = a.slice(); for (var i = b.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var x = b[i]; b[i] = b[j]; b[j] = x; } return b; }
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+
+  /* ---------- flash cards ---------- */
+  var cv = $('view-cards');
+  var C = { deck: [], idx: 0, flipped: false, res: {}, first: 'term', done: false };
+
+  function startDeck(list, doShuffle) {
+    C.deck = doShuffle ? shuffle(list) : list.slice();
+    C.idx = 0; C.flipped = false; C.res = {}; C.done = false;
+    renderCards();
+  }
+  function counts() {
+    var g = 0, m = 0;
+    C.deck.forEach(function (c) { if (C.res[c.id] === 'got') g++; else if (C.res[c.id] === 'miss') m++; });
+    return { g: g, m: m };
+  }
+  function frontHTML(c) {
+    if (C.first === 'picture') {
+      return '<span class="chip">' + c.tag + '</span><div class="front-center"><p class="flip-hint">What term does this picture show?</p><div class="fig big">' + svg(c.art, c.cap, false) + '</div><p class="flip-hint">Tap the card to flip it</p></div>';
+    }
+    if (C.first === 'definition') {
+      return '<span class="chip">' + c.tag + '</span><div class="front-center"><p class="flip-hint">Which term matches this definition?</p><p class="def" style="font-size:clamp(20px,5vw,26px);line-height:1.35">' + esc(c.def) + '</p><p class="flip-hint">Tap the card to flip it</p></div>';
+    }
+    return '<span class="chip">' + c.tag + '</span><div class="front-center"><h2 class="term">' + esc(c.term) + '</h2><p class="flip-hint">Say the meaning in your own words, then tap the card to check.</p></div>';
+  }
+  function backHTML(c) {
+    return '<span class="chip">' + c.tag + '</span><h2 class="term" style="font-size:clamp(24px,6vw,32px)">' + esc(c.term) + '</h2><p class="def">' + esc(c.def) + '</p><div class="fig">' + svg(c.art, c.cap, true) + '</div>';
+  }
+  function renderCards() {
+    if (C.done) { renderSummary(); return; }
+    var c = C.deck[C.idx], n = C.deck.length, k = counts(), st = C.res[c.id];
+    var pill = st === 'got' ? '<span class="state-pill got">Marked: got it</span>' : st === 'miss' ? '<span class="state-pill miss">Marked: study again</span>' : '';
+    cv.innerHTML =
+      '<div class="bar"><div class="seg" role="group" aria-label="Start each card with">' +
+        '<button type="button" data-first="term" aria-pressed="' + (C.first === 'term') + '">Term first</button>' +
+        '<button type="button" data-first="definition" aria-pressed="' + (C.first === 'definition') + '">Definition first</button>' +
+        '<button type="button" data-first="picture" aria-pressed="' + (C.first === 'picture') + '">Picture first</button></div>' +
+        '<button class="btn" type="button" id="c-shuffle">Shuffle deck</button></div>' +
+      '<div class="meter"><div class="meter-top"><span>Card ' + (C.idx + 1) + ' of ' + n + '</span><span aria-live="polite">Got it ' + k.g + ' · Study again ' + k.m + '</span></div>' +
+        '<div class="track" aria-hidden="true"><i class="got" style="width:' + (k.g / n * 100) + '%"></i><i class="miss" style="width:' + (k.m / n * 100) + '%"></i></div></div>' +
+      pill +
+      '<div class="stage"><button type="button" class="card' + (C.flipped ? ' flipped' : '') + '" id="c-card" aria-label="Flash card. Press to flip.">' +
+        '<div class="face front" aria-hidden="' + C.flipped + '">' + frontHTML(c) + '</div>' +
+        '<div class="face back" aria-hidden="' + (!C.flipped) + '">' + backHTML(c) + '</div></button></div>' +
+      '<div class="actions"><div class="grp"><button class="btn" type="button" id="c-prev">Back</button><button class="btn" type="button" id="c-next">Skip</button></div>' +
+        '<div class="grp"><button class="btn warn" type="button" id="c-miss"' + (C.flipped ? '' : ' disabled') + '>Study again</button><button class="btn good" type="button" id="c-got"' + (C.flipped ? '' : ' disabled') + '>Got it</button></div></div>' +
+      '<p class="note">' + (C.flipped ? 'Be honest. Cards you miss go into a retry deck at the end.' : 'Flip the card to unlock the Got it and Study again buttons. Arrow keys move between cards.') + '</p>';
+    cv.querySelectorAll('[data-first]').forEach(function (b) { b.addEventListener('click', function () { C.first = b.getAttribute('data-first'); C.flipped = false; renderCards(); }); });
+    $('c-shuffle').addEventListener('click', function () { startDeck(C.deck, true); });
+    $('c-card').addEventListener('click', function () { C.flipped = !C.flipped; $('c-card').classList.toggle('flipped', C.flipped); setTimeout(renderCards, 0); });
+    $('c-prev').addEventListener('click', function () { go(-1); });
+    $('c-next').addEventListener('click', function () { go(1); });
+    $('c-got').addEventListener('click', function () { mark('got'); });
+    $('c-miss').addEventListener('click', function () { mark('miss'); });
+  }
+  function go(d) { C.idx = (C.idx + d + C.deck.length) % C.deck.length; C.flipped = false; renderCards(); }
+  function mark(v) {
+    var c = C.deck[C.idx]; C.res[c.id] = v;
+    var left = C.deck.some(function (x) { return !C.res[x.id]; });
+    if (!left) { C.done = true; renderCards(); return; }
+    for (var i = 1; i <= C.deck.length; i++) {
+      var j = (C.idx + i) % C.deck.length;
+      if (!C.res[C.deck[j].id]) { C.idx = j; break; }
+    }
+    C.flipped = false; renderCards();
+  }
+  function renderSummary() {
+    var k = counts(), n = C.deck.length, missed = C.deck.filter(function (c) { return C.res[c.id] === 'miss'; });
+    cv.innerHTML =
+      '<div class="qcard"><p class="eyebrow">Deck complete</p><p class="score">' + k.g + ' of ' + n + '</p>' +
+      '<p>' + (missed.length ? 'You marked ' + missed.length + ' card' + (missed.length === 1 ? '' : 's') + ' to study again. Retry just those, or run the whole deck in a new order.' : 'You got every card. Shuffle the deck to test yourself in a new order.') + '</p>' +
+      (missed.length ? '<ul class="review">' + missed.map(function (c) { return '<li><p class="q">' + esc(c.term) + '</p><p class="w">' + esc(c.def) + '</p></li>'; }).join('') + '</ul>' : '') +
+      '<div class="actions"><div class="grp">' +
+        (missed.length ? '<button class="btn primary" type="button" id="s-retry">Retry missed (' + missed.length + ')</button>' : '') +
+        '<button class="btn' + (missed.length ? '' : ' primary') + '" type="button" id="s-shuf">Shuffle all and restart</button>' +
+        '<button class="btn" type="button" id="s-ord">Restart in order</button></div></div></div>';
+    if (missed.length) $('s-retry').addEventListener('click', function () { startDeck(missed, true); });
+    $('s-shuf').addEventListener('click', function () { startDeck(CARDS, true); });
+    $('s-ord').addEventListener('click', function () { startDeck(CARDS, false); });
+  }
+
+  /* ---------- quiz ---------- */
+  var QS = { quiz: { list: [], i: 0, picked: -1, score: 0, missed: [] } };
+  var Q = QS.quiz, qv = $('view-quiz'), SRC = QUIZ, PREFIX = 'Bank #', ENG = 'quiz';
+  function useEngine(name) {
+    ENG = name; Q = QS[name]; qv = $('view-' + name); SRC = QUIZ; PREFIX = 'Bank #';
+  }
+  var LET = ['A', 'B', 'C', 'D'];
+  function buildQs(src) {
+    return shuffle(src).map(function (x) {
+      if (x.dds) return { q: x.q, num: SRC.indexOf(x) + 1, dds: x.dds, dSel: x.dds.parts.map(function () { return ''; }), dChecked: false, why: x.why, c: x.c, src: x };
+      if (x.dd) return { q: x.q, num: SRC.indexOf(x) + 1, dd: x.dd, ddPlace: { top: null, bottom: null }, ddSel: null, ddChecked: false, why: x.why, c: x.c, src: x };
+      if (x.matrix) return { q: x.q, num: SRC.indexOf(x) + 1, matrix: x.matrix, mSel: [-1, -1, -1], mChecked: false, why: x.why, c: x.c, src: x };
+      var opts = shuffle([{ t: x.c, ok: true, why: x.why }].concat(x.w.map(function (w) { return { t: w.t, ok: false, why: w.why }; })));
+      return { q: x.q, num: SRC.indexOf(x) + 1, art: x.art, table: x.table, opts: opts, why: x.why, c: x.c, src: x };
+    });
+  }
+  function startQuiz(src) { Q.list = buildQs(src); Q.i = 0; Q.picked = -1; Q.score = 0; Q.missed = []; renderQuiz(); }
+  function renderQuiz() {
+    if (Q.i >= Q.list.length) { renderResults(); return; }
+    var q = Q.list[Q.i], n = Q.list.length, answered = Q.picked >= 0;
+    if (q.matrix) { renderMatrix(q, n); return; }
+    if (q.dd) { renderDD(q, n); return; }
+    if (q.dds) { renderDDS(q, n); return; }
+    var okPick = answered && q.opts[Q.picked].ok;
+    var fb = '';
+    if (answered) {
+      var pk = q.opts[Q.picked];
+      fb = okPick
+        ? '<div class="fb right" role="status"><strong>Correct!</strong>' + esc(q.why) + '</div>'
+        : '<div class="fb wrong" role="status"><strong>Not quite.</strong>' + esc(pk.why) + '</div>' +
+          '<div class="fb right"><strong>The correct answer: ' + esc(q.c) + '</strong>' + esc(q.why) + '</div>';
+    }
+    qv.innerHTML =
+      '<div class="meter"><div class="meter-top"><span>Question ' + (Q.i + 1) + ' of ' + n + '</span><span aria-live="polite">Score ' + Q.score + '</span></div>' +
+        '<div class="track" aria-hidden="true"><i class="got" style="width:' + (Q.i / n * 100) + '%"></i></div></div>' +
+      '<div class="qcard"><span class="chip">' + PREFIX + q.num + '</span><p class="qtext">' + esc(q.q) + '</p>' +
+      (q.art ? '<div class="fig">' + svg(q.art, null, false) + '</div>' : '') +
+      (q.table ? '<div class="dataset tbl">' + q.table + '</div>' : '') +
+      '<div class="opts">' +
+      q.opts.map(function (o, k) {
+        var cls = 'opt' + (answered ? (o.ok ? ' right' : (k === Q.picked ? ' wrong' : '')) : '');
+        return '<button type="button" class="' + cls + '" data-k="' + k + '"' + (answered ? ' disabled' : '') + '><span class="k">' + LET[k] + '</span><span class="t">' + esc(o.t) + '</span></button>';
+      }).join('') + '</div>' + fb +
+      (answered ? '<div class="ai-out fb" id="q-ai-out" hidden></div><div class="actions"><span>' + (AI.sample ? '<button class="btn" type="button" id="q-ai">Explain it another way</button>' : '') + '</span><button class="btn primary" type="button" id="q-next">' + (Q.i + 1 === n ? 'See results' : 'Next question') + '</button></div>' : '') +
+      '</div>';
+    qv.querySelectorAll('.opt').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var k = Number(b.getAttribute('data-k')); Q.picked = k;
+        if (q.opts[k].ok) Q.score++; else Q.missed.push(q.src);
+        renderQuiz();
+        var f = qv.querySelector('.fb'); if (f && f.scrollIntoView) f.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      });
+    });
+    if (answered && AI.sample && $('q-ai')) $('q-ai').addEventListener('click', function () {
+      var out = $('q-ai-out'), pk = q.opts[Q.picked]; out.hidden = false; out.textContent = 'Thinking\u2026'; $('q-ai').disabled = true;
+      AI.sample('You are a friendly grade 8 science tutor. A student answered a practice question. Explain the idea a different way, using a simple real-life analogy, in 3 to 4 short sentences at an 8th grade reading level. Do not ask a new question. Plain text only.\n\nQuestion: ' + q.q + '\nStudent chose: ' + pk.t + '\nCorrect answer: ' + q.c + '\nTextbook explanation: ' + q.why, { modelTier: 'quick', onText: function (u) { out.textContent = u.text; } })
+        .catch(function (e) { out.textContent = errCopy(e && e.code); })
+        .then(function () { if ($('q-ai')) $('q-ai').disabled = false; });
+    });
+    if (answered) $('q-next').addEventListener('click', function () { Q.i++; Q.picked = -1; renderQuiz(); window.scrollTo(0, 0); });
+  }
+  function ddSvg() {
+    return '<svg viewBox="0 0 220 180" role="img" aria-label="A ball with two force arrows. The top arrow points down. The bottom arrow points up. A compass shows north is toward the top." focusable="false">' +
+      '<line class="gnd" x1="36" y1="22" x2="36" y2="62" stroke-width="1.5"/><line class="gnd" x1="16" y1="42" x2="56" y2="42" stroke-width="1.5"/><circle class="obj" cx="36" cy="42" r="4"/>' +
+      t(36, 16, 'N') + t(36, 76, 'S') + t(10, 46, 'W') + t(62, 46, 'E') +
+      '<circle class="obj" cx="130" cy="90" r="28"/>' + t(130, 94, 'MASSLABEL') +
+      arrow(130, 6, 130, 56, 'f', 4) + arrow(130, 174, 130, 124, 'f', 4) + '</svg>';
+  }
+  function boxSvg() {
+    return '<svg viewBox="0 0 360 170" role="img" aria-label="A box with three forces. Two arrows on the left point right: 37 newtons and 28 newtons. One arrow on the right points left: 95 newtons." focusable="false">' +
+      '<polygon points="130,60 150,42 220,42 200,60" fill="var(--obj)" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/>' +
+      '<polygon points="200,60 220,42 220,112 200,130" fill="var(--react)" opacity=".55" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/>' +
+      '<rect x="130" y="60" width="70" height="70" fill="var(--obj)" stroke="var(--ink)" stroke-width="2.5"/>' + t(165, 100, '40 kg', 'middle', 'vl') +
+      arrow(16, 80, 124, 80, 'n', 4) + t(70, 68, '37 N', 'middle', 'vl') + arrow(16, 114, 124, 114, 'n', 4) + t(70, 102, '28 N', 'middle', 'vl') +
+      arrow(344, 96, 238, 96, 'n', 4) + t(292, 84, '95 N', 'middle', 'vl') + '</svg>';
+  }
+  function renderDDS(q, n) {
+    var D = q.dds, done = q.dChecked, sel = q.dSel;
+    var rows = D.parts.map(function (pt, i) {
+      var cls = done ? (sel[i] === pt.ans ? ' class="ok"' : ' class="bad"') : '';
+      return '<div class="ddrow"><label for="dds' + i + '">' + esc(pt.label) + '</label><select id="dds' + i + '"' + cls + (done ? ' disabled' : '') + '><option value="">Choose…</option>' +
+        pt.opts.map(function (o) { return '<option value="' + esc(o) + '"' + (sel[i] === o ? ' selected' : '') + '>' + esc(o) + '</option>'; }).join('') + '</select></div>';
+    }).join('');
+    var fb = done ? D.parts.map(function (pt, i) {
+      var ok = sel[i] === pt.ans;
+      return '<div class="fb ' + (ok ? 'right' : 'wrong') + '"><strong>' + (ok ? 'Correct: ' : 'Not quite: ') + esc(pt.label) + '</strong>' +
+        (ok ? '' : esc(pt.wrong[sel[i]] || '') + ' The right answer is ' + esc(pt.ans) + '. ') + esc(pt.why) + '</div>';
+    }).join('') : '';
+    var ready = sel.every(function (v) { return v !== ''; });
+    qv.innerHTML =
+      '<div class="meter"><div class="meter-top"><span>Question ' + (Q.i + 1) + ' of ' + n + '</span><span aria-live="polite">Score ' + Q.score + '</span></div>' +
+        '<div class="track" aria-hidden="true"><i class="got" style="width:' + (Q.i / n * 100) + '%"></i></div></div>' +
+      '<div class="qcard"><span class="chip">' + PREFIX + q.num + '</span><p class="qtext">' + esc(q.q) + '</p>' +
+      '<div class="fig big">' + boxSvg() + '</div>' + rows + fb +
+      '<div class="actions"><span></span>' + (done
+        ? '<button class="btn primary" type="button" id="dds-next">' + (Q.i + 1 === n ? 'See results' : 'Next question') + '</button>'
+        : '<button class="btn primary" type="button" id="dds-check"' + (ready ? '' : ' disabled') + '>Check my answers</button>') + '</div></div>';
+    if (done) {
+      $('dds-next').addEventListener('click', function () { Q.i++; Q.picked = -1; renderQuiz(); window.scrollTo(0, 0); });
+      var f = qv.querySelector('.fb'); if (f && f.scrollIntoView) f.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      return;
+    }
+    D.parts.forEach(function (pt, i) {
+      $('dds' + i).addEventListener('change', function () { sel[i] = $('dds' + i).value; $('dds-check').disabled = !sel.every(function (v) { return v !== ''; }); });
+    });
+    $('dds-check').addEventListener('click', function () {
+      q.dChecked = true;
+      if (D.parts.every(function (pt, i) { return sel[i] === pt.ans; })) Q.score++; else Q.missed.push(q.src);
+      renderDDS(q, n);
+    });
+  }
+  function renderDD(q, n) {
+    var D = q.dd, P = q.ddPlace, done = q.ddChecked;
+    var bank = D.chips.filter(function (v) { return v !== P.top && v !== P.bottom; });
+    function chipHTML(v, where) {
+      return '<button type="button" class="chipbtn" draggable="' + (!done) + '" data-v="' + v + '" data-where="' + where + '" aria-pressed="' + (q.ddSel === v) + '"' + (done ? ' disabled' : '') + '>' + v + ' newtons</button>';
+    }
+    function zone(key, label) {
+      var v = P[key], cls = 'zone' + (done ? (v === D[key] ? ' ok' : ' bad') : '');
+      return '<div class="' + cls + '" data-zone="' + key + '" tabindex="' + (done ? '-1' : '0') + '" role="group" aria-label="Box for the ' + label + '">' + (v !== null ? chipHTML(v, key) : '<span>' + label + ': drop an answer here</span>') + '</div>';
+    }
+    var svgHTML = ddSvg().replace('MASSLABEL', D.mass + ' kg');
+    var fb = '';
+    if (done) {
+      var net = P.bottom - P.top, ok = P.top === D.top && P.bottom === D.bottom;
+      var what = net > 0 ? 'a net force of ' + net + ' N to the north, so the ball would accelerate north at ' + Math.round(net / D.mass * 100) / 100 + ' m/s²'
+        : net < 0 ? 'a net force of ' + (-net) + ' N to the south, so the ball would accelerate south at ' + Math.round(-net / D.mass * 100) / 100 + ' m/s²'
+        : 'balanced forces, so the ball would not accelerate';
+      fb = ok ? '<div class="fb right" role="status"><strong>Correct!</strong>' + esc(q.why) + '</div>'
+        : '<div class="fb wrong" role="status"><strong>Not quite.</strong>Your labels give ' + esc(what) + '. The ball needs to accelerate north at ' + D.a + ' m/s², so the net force must be ' + D.mass + ' kg × ' + D.a + ' m/s² = ' + (D.mass * D.a) + ' N to the north.</div>' +
+          '<div class="fb right"><strong>The correct answer: ' + esc(q.c) + '</strong>' + esc(q.why) + '</div>';
+    }
+    var ready = P.top !== null && P.bottom !== null;
+    qv.innerHTML =
+      '<div class="meter"><div class="meter-top"><span>Question ' + (Q.i + 1) + ' of ' + n + '</span><span aria-live="polite">Score ' + Q.score + '</span></div>' +
+        '<div class="track" aria-hidden="true"><i class="got" style="width:' + (Q.i / n * 100) + '%"></i></div></div>' +
+      '<div class="qcard"><span class="chip">' + PREFIX + q.num + '</span><p class="qtext">' + esc(q.q) + '</p>' +
+      '<div class="dd-bank" data-bank="1" aria-label="Answer choices">' + (bank.length ? bank.map(function (v) { return chipHTML(v, 'bank'); }).join('') : '<span class="note">All answers are placed.</span>') + '</div>' +
+      '<div class="dd-wrap"><div class="fig">' + svgHTML + '</div><div class="dd-zones">' + zone('top', 'Top arrow') + zone('bottom', 'Bottom arrow') + '</div></div>' +
+      (done ? '' : '<p class="note">Drag a label into each box, or tap a label and then tap a box. Tap a placed label to take it back.</p>') + fb +
+      '<div class="actions"><span></span>' + (done
+        ? '<button class="btn primary" type="button" id="dd-next">' + (Q.i + 1 === n ? 'See results' : 'Next question') + '</button>'
+        : '<button class="btn primary" type="button" id="dd-check"' + (ready ? '' : ' disabled') + '>Check my answers</button>') + '</div></div>';
+    if (done) {
+      $('dd-next').addEventListener('click', function () { Q.i++; Q.picked = -1; renderQuiz(); window.scrollTo(0, 0); });
+      var f = qv.querySelector('.fb'); if (f && f.scrollIntoView) f.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      return;
+    }
+    function place(key, v, from) {
+      if (from === 'top' || from === 'bottom') { P[from] = P[key]; }
+      P[key] = v; q.ddSel = null; renderDD(q, n);
+    }
+    qv.querySelectorAll('.chipbtn').forEach(function (b) {
+      var v = Number(b.getAttribute('data-v')), where = b.getAttribute('data-where');
+      b.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (where === 'bank') { q.ddSel = q.ddSel === v ? null : v; renderDD(q, n); }
+        else { P[where] = null; q.ddSel = null; renderDD(q, n); }
+      });
+      b.addEventListener('dragstart', function (e) { e.dataTransfer.setData('text/plain', v + '|' + where); e.dataTransfer.effectAllowed = 'move'; });
+    });
+    qv.querySelectorAll('.zone').forEach(function (z) {
+      var key = z.getAttribute('data-zone');
+      z.addEventListener('click', function () { if (q.ddSel !== null) place(key, q.ddSel, 'bank'); });
+      z.addEventListener('keydown', function (e) { if ((e.key === 'Enter' || e.key === ' ') && e.target === z && q.ddSel !== null) { e.preventDefault(); place(key, q.ddSel, 'bank'); } });
+      z.addEventListener('dragover', function (e) { e.preventDefault(); z.classList.add('over'); });
+      z.addEventListener('dragleave', function () { z.classList.remove('over'); });
+      z.addEventListener('drop', function (e) {
+        e.preventDefault(); z.classList.remove('over');
+        var d = (e.dataTransfer.getData('text/plain') || '').split('|'); var v = Number(d[0]); if (!isFinite(v) || D.chips.indexOf(v) < 0) return;
+        place(key, v, d[1]);
+      });
+    });
+    var bk = qv.querySelector('[data-bank]');
+    bk.addEventListener('dragover', function (e) { e.preventDefault(); bk.classList.add('over'); });
+    bk.addEventListener('dragleave', function () { bk.classList.remove('over'); });
+    bk.addEventListener('drop', function (e) {
+      e.preventDefault(); bk.classList.remove('over');
+      var d = (e.dataTransfer.getData('text/plain') || '').split('|');
+      if (d[1] === 'top' || d[1] === 'bottom') { P[d[1]] = null; q.ddSel = null; renderDD(q, n); }
+    });
+    $('dd-check').addEventListener('click', function () {
+      q.ddChecked = true;
+      if (P.top === D.top && P.bottom === D.bottom) Q.score++; else Q.missed.push(q.src);
+      renderDD(q, n);
+    });
+  }
+  function renderMatrix(q, n) {
+    var M = q.matrix, sel = q.mSel, done = q.mChecked;
+    var head = '<tr><th scope="col"><span class="vh">Situation</span></th>' + M.cols.map(function (c) { return '<th scope="col">' + esc(c) + '</th>'; }).join('') + '</tr>';
+    var rows = M.rows.map(function (r, i) {
+      var cells = M.cols.map(function (c, k) {
+        var cls = done && k === r.ans ? ' class="cellok"' : (done && sel[i] === k ? ' class="cellbad"' : '');
+        return '<td' + cls + '><input type="radio" name="mx' + i + '" value="' + k + '"' + (sel[i] === k ? ' checked' : '') + (done ? ' disabled' : '') + ' aria-label="' + esc(r.label + ': ' + c) + '"></td>';
+      }).join('');
+      return '<tr><th scope="row">' + esc(r.label) + '</th>' + cells + '</tr>';
+    }).join('');
+    var fb = done ? M.rows.map(function (r, i) {
+      var ok = sel[i] === r.ans;
+      return '<div class="fb ' + (ok ? 'right' : 'wrong') + '"><strong>' + (ok ? 'Correct: ' : 'Not quite: ') + esc(r.label) + '</strong>' + (ok ? '' : 'The right answer is “' + esc(M.cols[r.ans]) + '.” ') + esc(r.why) + '</div>';
+    }).join('') : '';
+    var ready = sel.every(function (v) { return v >= 0; });
+    qv.innerHTML =
+      '<div class="meter"><div class="meter-top"><span>Question ' + (Q.i + 1) + ' of ' + n + '</span><span aria-live="polite">Score ' + Q.score + '</span></div>' +
+        '<div class="track" aria-hidden="true"><i class="got" style="width:' + (Q.i / n * 100) + '%"></i></div></div>' +
+      '<div class="qcard"><span class="chip">' + PREFIX + q.num + '</span><p class="qtext">' + esc(q.q) + '</p>' +
+      '<div class="tbl"><table class="mx"><thead>' + head + '</thead><tbody>' + rows + '</tbody></table></div>' + fb +
+      '<div class="actions"><span></span>' + (done
+        ? '<button class="btn primary" type="button" id="mx-next">' + (Q.i + 1 === n ? 'See results' : 'Next question') + '</button>'
+        : '<button class="btn primary" type="button" id="mx-check"' + (ready ? '' : ' disabled') + '>Check my answers</button>') + '</div></div>';
+    if (done) {
+      $('mx-next').addEventListener('click', function () { Q.i++; Q.picked = -1; renderQuiz(); window.scrollTo(0, 0); });
+      var f = qv.querySelector('.fb'); if (f && f.scrollIntoView) f.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    } else {
+      qv.querySelectorAll('input[type="radio"]').forEach(function (r) {
+        r.addEventListener('change', function () {
+          sel[Number(r.name.slice(2))] = Number(r.value);
+          $('mx-check').disabled = !sel.every(function (v) { return v >= 0; });
+        });
+      });
+      $('mx-check').addEventListener('click', function () {
+        q.mChecked = true;
+        var all = M.rows.every(function (r, i) { return sel[i] === r.ans; });
+        if (all) Q.score++; else Q.missed.push(q.src);
+        renderMatrix(q, n);
+      });
+    }
+  }
+  function renderResults() {
+    var n = Q.list.length, m = Q.missed;
+    qv.innerHTML =
+      '<div class="qcard"><p class="eyebrow">Quiz complete</p><p class="score">' + Q.score + ' of ' + n + '</p>' +
+      '<p>' + (m.length ? 'Read the explanations for what you missed, then retry just those questions.' : 'Perfect score. Take it again in a new order to lock it in.') + '</p>' +
+      (m.length ? '<ul class="review">' + m.map(function (x) { return '<li><p class="q">' + esc(x.q) + '</p><p class="a">Answer: ' + esc(x.c) + '</p><p class="w">' + esc(x.why) + '</p></li>'; }).join('') + '</ul>' : '') +
+      '<div class="actions"><div class="grp">' +
+        (m.length ? '<button class="btn primary" type="button" id="r-retry">Retry missed (' + m.length + ')</button>' : '') +
+        '<button class="btn' + (m.length ? '' : ' primary') + '" type="button" id="r-all">New shuffle, all questions</button></div></div></div>';
+    if (m.length) $('r-retry').addEventListener('click', function () { startQuiz(m); });
+    $('r-all').addEventListener('click', function () { startQuiz(SRC); });
+  }
+
+
+  /* ---------- Study Guide Zone additions ---------- */
+  /* logo */
+  if (LOGO_SRC) {
+    $('logo-img').src = LOGO_SRC; $('logo-img').hidden = false; $('logo-paw').style.display = 'none';
+  }
+
+  /* vocabulary list from the card deck */
+  $('vocab-list').innerHTML = CARDS.map(function (c) {
+    return '<div><dt>' + esc(c.term) + '</dt><dd>' + esc(c.def) + '</dd></div>';
+  }).join('');
+
+  /* ---------- Claude helper (optional) ---------- */
+  function errCopy(code) {
+    var m = {
+      not_granted: 'You chose not to allow Claude on this page. Reload the page if you change your mind.',
+      sampling_disabled: 'Claude is not available for this account.',
+      rate_limited: 'Too many requests right now. Wait a minute, then try again.',
+      session_expired: 'Please sign in to Claude again, then try again.',
+      prompt_too_large: 'That is too long. Shorten it and try again.',
+      refused: 'Claude could not answer that. Try rewording it.',
+      invalid_json: 'The feedback came back in a form I could not read. Press the button to try again.'
+    };
+    return m[code] || 'Something went wrong. Try again in a moment.';
+  }
+  function aiStatus() {}
+  AI.ready = false;
+  if (window.claude && window.claude.use) {
+    window.claude.use('sample').then(function (s) { AI.sample = s || null; AI.ready = true; aiStatus(); }).catch(function () { AI.ready = true; aiStatus(); });
+  } else { AI.ready = true; aiStatus(); }
+
+  /* ---------- tabs and routing ---------- */
+  var VIEWS = ['guide', 'cards', 'quiz'];
+  function route() {
+    var v = location.hash.replace('#', ''); if (VIEWS.indexOf(v) < 0) v = 'guide';
+    VIEWS.forEach(function (n) {
+      $('view-' + n).hidden = n !== v;
+      $('tab-' + n).setAttribute('aria-current', n === v ? 'page' : 'false');
+    });
+    if (v !== 'quiz') $('view-quiz').innerHTML = '';
+    if (v === 'quiz') { useEngine('quiz'); renderQuiz(); }
+  }
+  VIEWS.forEach(function (n) { $('tab-' + n).addEventListener('click', function () { location.hash = n; window.scrollTo(0, 0); }); });
+  window.addEventListener('hashchange', route);
+  document.addEventListener('keydown', function (e) {
+    if (location.hash !== '#cards' || C.done) return;
+    var tag = (e.target && e.target.tagName) || '';
+    if (tag === 'TEXTAREA' || tag === 'INPUT') return;
+    if (e.key === 'ArrowRight') { go(1); } else if (e.key === 'ArrowLeft') { go(-1); }
+  });
+
+  aiStatus();
+  startDeck(CARDS, true);
+  useEngine('quiz'); startQuiz(QUIZ);
+  route();
+
+})();
+</script>
+
+</body></html>
